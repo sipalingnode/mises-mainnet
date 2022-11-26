@@ -20,3 +20,6 @@
 ```
 wget -O mises-mainnet.sh https://raw.githubusercontent.com/sipalingnode/mises-mainnet/main/mises-mainnet.sh && chmod +x mises-mainnet.sh && ./mises-mainnet.sh
 ```
+```
+source $HOME/.bash_profile
+```
