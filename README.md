@@ -36,7 +36,7 @@ echo 'export MISES_WALLET_ADDRESS='${MISES_WALLET_ADDRESS} >> $HOME/.bash_profil
 echo 'export MISES_VALOPER_ADDRESS='${MISES_VALOPER_ADDRESS} >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
-## Buat Validator
+## Buat Validator (Membutuhkan setidaknya 2 Mises Mainnet)
 **Check status Node dulu kalo udah False boleh lanjut, kalo masih True jangan dulu**
 ```
 misestmd status 2>&1 | jq .SyncInfo
