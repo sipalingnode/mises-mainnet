@@ -102,7 +102,7 @@ misestmd tx distribution withdraw-all-rewards --from=$WALLET --chain-id=$MISES_C
 ```
 misestmd tx distribution withdraw-rewards $MISES_VALOPER_ADDRESS --from=$WALLET --commission --chain-id=$MISES_CHAIN_ID
 ```
-**Delete Node**
+**Hapus Node**
 ```
 sudo systemctl stop misestmd && \
 sudo systemctl disable misestmd && \
@@ -110,7 +110,7 @@ rm /etc/systemd/system/misestmd.service && \
 sudo systemctl daemon-reload && \
 cd $HOME && \
 rm -rf mises-tm && \
-rm -rf mises.sh && \
+rm -rf mises-mainnet.sh && \
 rm -rf .misestm && \
 rm -rf $(which misestmd)
 ```
