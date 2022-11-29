@@ -20,17 +20,18 @@ echo -e '\e[35mTelegram Channel :\e[35m' @airdropasc
 echo -e '\e[35mYoutube :\e[35m' auto sultan
 echo "================================================================="
 
+sleep 2
+
 # set vars
 if [ ! $NODENAME ]; then
 	read -p "Enter node name: " NODENAME
 	echo 'export NODENAME='$NODENAME >> $HOME/.bash_profile
 fi
-MISES_PORT=36
+
 if [ ! $WALLET ]; then
 	echo "export WALLET=wallet" >> $HOME/.bash_profile
 fi
 echo "export MISES_CHAIN_ID=mainnet" >> $HOME/.bash_profile
-echo "export MISES_PORT=${MISES_PORT}" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 
 echo '================================================='
