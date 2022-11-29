@@ -80,12 +80,8 @@ misestmd init $NODENAME --chain-id $MISES_CHAIN_ID
 curl https://e1.mises.site:443/genesis | jq .result.genesis > ~/.misestm/config/genesis.json
 
 # set peers and seeds
-PEERS=40a8318fa18fa9d900f4b0d967df7b1020689fa0@e1.mises.site:26656
+PEERS=40889503320199c676570b417b132755d0414332@rpc.gw.mises.site:26656
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.misestm/config/config.toml
-
-# set custom ports
-sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${MISES_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${MISES_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${MISES_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${MISES_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${MISES_PORT}660\"%" $HOME/.misestm/config/config.toml
-sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${MISES_PORT}317\"%; s%^address = \":8080\"%address = \":${MISES_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${MISES_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${MISES_PORT}091\"%" $HOME/.misestm/config/app.toml
 
 # config pruning
 pruning="custom"
