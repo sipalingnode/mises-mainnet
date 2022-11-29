@@ -71,7 +71,6 @@ make install
 # config
 misestmd config chain-id $MISES_CHAIN_ID
 misestmd config keyring-backend test
-misestmd config node tcp://localhost:${MISES_PORT}657
 
 # init
 misestmd init $NODENAME --chain-id $MISES_CHAIN_ID
